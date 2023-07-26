@@ -1,4 +1,3 @@
-/* Reset styles and global styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +13,7 @@ body {
   color: #333;
 }
 
-/* Header styles */
+
 header {
   position: relative;
   background-color: #333;
@@ -41,7 +40,7 @@ header h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
-  color: #823838; /* You can choose a suitable color for your headings */
+  color: #823838;
 }
 
 nav ul {
@@ -65,7 +64,6 @@ nav a:hover {
   color: #ff6f00;
 }
 
-/* Section styles */
 section {
   padding: 2rem;
 }
@@ -74,7 +72,7 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #823838; /* You can choose a suitable color for your headings */
+  color: #823838;
 }
 
 p {
@@ -88,10 +86,10 @@ p {
 .about-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555; /* You can choose a suitable color for the about text */
+  color: #555;
 }
 
-/* "About us" section with "Social Media" button */
+
 .about-text {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -105,7 +103,7 @@ p {
 }
 
 .about-social a {
-  padding: 10px 20px;
+  padding: 5px 20px;
   background-color: #823838;
   color: #fff;
   border: none;
@@ -119,8 +117,6 @@ p {
   background-color: #ff6f00;
 }
 
-/* Gallery styles */
-/* Your existing styles (without the ::after pseudo-element) */
 
 /* Gallery styles */
 .gallery {
@@ -150,15 +146,14 @@ p {
 .image-wrapper[data-video-id] i {
   color: #fff;
   font-size: 40px;
-  opacity: 0; /* Hide the icon by default */
+  opacity: 0;
 }
 
 .image-wrapper[data-video-id]:hover i {
-  opacity: 1; /* Show the icon on hover */
+  opacity: 1;
 }
 
 
-/* Gallery button styles */
 .gallery-button {
   text-align: center;
   margin-top: 20px;
@@ -178,12 +173,10 @@ p {
   background-color: #ff6f00;
 }
 
-/* Social Media styles */
 .social-icons a {
   text-decoration: none;
 }
 
-/* Overlay styles for video player */
 .overlay {
   position: fixed;
   top: 0;
@@ -209,10 +202,9 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
+  border: #823838;
 }
 
-/* Optional: Dark mode styles */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #111;
@@ -228,7 +220,6 @@ p {
   }
 }
 
-/* Optional: Light mode styles */
 @media (prefers-color-scheme: light) {
   body {
     background-color: #f7f7f7;
