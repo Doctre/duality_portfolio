@@ -98,7 +98,7 @@ p {
 }
 
 .about-social {
-  display: inline;
+  display: inline-table;
   margin-left: 10px;
 }
 
