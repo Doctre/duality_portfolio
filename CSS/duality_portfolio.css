@@ -21,7 +21,9 @@ header {
   text-align: center;
   padding: 1rem;
 }
-
+.name{
+	display: inline;
+}
 .flag {
   position: absolute;
   top: 10px;
@@ -125,7 +127,9 @@ p {
   grid-gap: 20px;
   justify-items: center;
 }
-
+.qwerty{
+	display: inline-block;
+}
 .image-wrapper {
   cursor: pointer;
   width: 100%;
@@ -205,8 +209,16 @@ p {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #264c48;
-    color: #ddd;
+    background-color: #140f22;
+	background-image:
+		url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+		linear-gradient(90deg, #261947, #63339c, #140f22);
+	background-repeat: no-repeat, repeat, repeat;
+	background-position: 0% 100%, 0 0, center;
+	background-blend-mode: lighten;
+	background-attachment: fixed;
+	background-size: 100vmin, auto, auto;
+	animation: start1 2s ease-in-out;
   }
 
   header {
@@ -220,9 +232,17 @@ p {
 
 @media (prefers-color-scheme: light) {
   body {
-    background-color: #c7ddd7;
-    color: #333;
-  }
+    background-color: #140f22;
+	background-image:
+		url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+		linear-gradient(90deg, #261947, #63339c, #140f22);
+	background-repeat: no-repeat, repeat, repeat;
+	background-position: 0% 100%, 0 0, center;
+	background-blend-mode: lighten;
+	background-attachment: fixed;
+	background-size: 100vmin, auto, auto;
+	animation: start1 2s ease-in-out;
+}
 
   header {
     background-color: #c7ddd7;
@@ -233,7 +253,7 @@ p {
   }
 }
 
-
+/*
 :root {
 	--color-one: #130e23;
 	--color-two: #364b44;
@@ -279,6 +299,7 @@ body {
 
 	color: var(--text-color);
 
+
 	background-color: #140f22;
 	background-image:
 		url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
@@ -290,11 +311,12 @@ body {
 	background-size: 100vmin, auto, auto;
 	animation: start1 2s ease-in-out;
 }
+
 .details-container {
   display: flex;
-  align-items: center; /* Vertically center contents */
-  margin-bottom: 20px; /* Add spacing between containers */
-}
+  align-items: center; /* Vertically center contents 
+  margin-bottom: 20px; Add spacing between containers 
+
 
 
 .details-container img {
@@ -376,7 +398,7 @@ img[width][height] {
 	height: auto;
 }
 
-/* Let SVG scale without boundaries */
+
 img[src$=".svg"] {
 	width: 50%;
 	height: auto;
@@ -389,9 +411,7 @@ input {
 
 label {
 	width: 100%;
-	/*   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
+
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto;
@@ -406,8 +426,7 @@ label {
 label > h4 {
 	height: var(--text-l-height);
 	overflow: hidden;
-	/*   text-overflow: ellipsis;
-  animation: text-hide var(--text-duration) ease-in-out; */
+
 	transition: height var(--text-duration) ease-in-out;
 	grid-area: h4;
 }
@@ -428,19 +447,19 @@ label > .slider {
 }
 
 input:checked + label > .slider {
-	/*  animation: details-show var(--slide-duration) ease-in-out; */
+
 	transition: height var(--slide-duration) ease-in-out;
 	height: var(--mem-height);
 }
 
 input:checked + label > h4 {
 	height: calc(var(--text-l-height) * 3);
-	/* animation: text-show var(--text-duration) ease-in-out; */
+	
 	transition: height var(--text-duration) ease-in-out;
 }
 
 input:not(:checked) + label > .slider {
-	/* animation: details-hide var(--slide-duration) ease-in-out; */
+
 	transition: height var(--slide-duration) ease-in-out;
 	height: 0;
 }
@@ -536,26 +555,26 @@ input:checked ~ label > .control {
 	}
 
 	input:not(:checked) + label:hover > .slider {
-		/* animation: details-show var(--slide-duration) ease-in-out; */
+	
 		transition: height var(--slide-duration) ease-in-out;
 		height: var(--mem-height);
 	}
 
 	input:not(:checked) + label:not(:hover) > .slider {
-		/* animation: details-hide var(--slide-duration) ease-in-out; */
+		
 		transition: height var(--slide-duration) ease-in-out;
 		height: 0;
 	}
 
 	input:not(:checked) + label:hover > h4 {
-		/* animation: text-show var(--text-duration) ease-in-out; */
+	
 		transition: height var(--text-duration) ease-in-out;
 		height: calc(var(--text-l-height) * 5);
 	}
 
-	input:not(:checked) + label:not(:hover) > h4 {
+	input:not(:checked) + label:not(:hover) > h4 {*/
 		/* animation: text-hide var(--text-duration) ease-in-out; */
-		transition: height var(--text-duration) ease-in-out;
+		/*transition: height var(--text-duration) ease-in-out;
 		height: var(--text-l-height);
 	}
 
@@ -574,8 +593,8 @@ input:checked ~ label > .control {
 }
 
 @media all and (min-width: 375px) and (max-width: 1022px) {
-	/*mobile*/
-	body {
+	*//*mobile*/
+/*	body {
 		background-image:
 			url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
 			linear-gradient(90deg, #261947, #63339c, #140f22);
@@ -591,7 +610,8 @@ input:checked ~ label > .control {
 }
 
 @media all and (min-width: 1023px) {
-	/*descktop*/
+	*//*descktop*/
+	/*
 	:root {
 		--mem-width: 38rem;
 		--mem-height: 36rem;
@@ -620,4 +640,787 @@ input:checked ~ label > .control {
 	main {
 		font-size: 1.5rem;
 	}
+	*/
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+.accordion {
+    max-width: 1200px;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+	.a4
+  {
+		background-image: url("../IMG/photo_Kate.jpg");
+		pposition: absolute;
+		background-position: left;
+}
+	.a5 {
+		background-image: url("../IMG/photo_Alex.jpg");
+		position: absolute;
+		background-position: up;
+	}
+.box {
+    position: relative;
+    height: 75%;
+    flex: 1;
+    background-size: cover;
+    transition: .9s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 3;
+    height: 500px;
+}
+p {
+    font-weight: normal;
+    font-family: 'Exo 2', sans-serif;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+.box:hover .text{
+    opacity:1;
+}
+h1 {
+    width: 250px;
+    text-align: center;
+    margin: 50px auto 20px auto;
+}
+@media screen and (max-width: 300px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 70px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 3;
+    }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #c7ddd7;
+}
+
+
+header {
+  position: relative;
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+.name{
+	display: inline;
+}
+.flag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 35px;
+  height: 100px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #e6686c;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+nav a:hover {
+  color: #e6686c;
+}
+
+section {
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #e6686c;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  color: #333;
+}
+
+.about-text {
+  font-size: 0.9 rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #c7ddd7;
+  display: inline;
+}
+
+.about-social {
+  display: inline-flex;
+  margin-left: 10px;
+}
+
+.about-social a {
+  padding: 5px 20px;
+  background-color: #e6686c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-social a:hover {
+  background-color: #99cdbf;
+}
+
+/* Gallery styles */
+.gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+}
+.qwerty{
+	display: inline-block;
+}
+.image-wrapper {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio for widescreen videos */
+  background-color: #000;
+}
+
+.image-wrapper[data-video-id] {
+  /* Center the play button icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper[data-video-id] i {
+  color: #63339c;
+  font-size: 40px;
+  opacity: 0;
+}
+
+.image-wrapper[data-video-id]:hover i {
+  opacity: 1;
+}
+
+
+.gallery-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.gallery-button button {
+  padding: 10px 20px;
+  background-color: #e6686c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery-button button:hover {
+  background-color: #99cdbf;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: #e6686c;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #140f22;
+	background-image:
+		url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+		linear-gradient(90deg, #261947, #63339c, #140f22);
+	background-repeat: no-repeat, repeat, repeat;
+	background-position: 0% 100%, 0 0, center;
+	background-blend-mode: lighten;
+	background-attachment: fixed;
+	background-size: 100vmin, auto, auto;
+	animation: start1 2s ease-in-out;
+  }
+
+  header {
+    background-color: #444;
+  }
+
+  nav a {
+    color: #ddd;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #140f22;
+	background-image:
+		url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+		linear-gradient(90deg, #261947, #63339c, #140f22);
+	background-repeat: no-repeat, repeat, repeat;
+	background-position: 0% 100%, 0 0, center;
+	background-blend-mode: lighten;
+	background-attachment: fixed;
+	background-size: 100vmin, auto, auto;
+	animation: start1 2s ease-in-out;
+}
+
+  header {
+    background-color: #c7ddd7;
+  }
+
+  nav a {
+    color: #333;
+  }
+}
+
+/*
+:root {
+	--color-one: #130e23;
+	--color-two: #364b44;
+	--text-color: #c2e6ef;
+	--mem-width: min(38em, calc(100vw - 4em));
+	--mem-height: min(36em, calc(100vw - 6em));
+	--slide-duration: 0.9s;
+	--text-duration: 0.9s;
+	--text-l-height: 1.5em;
+	--lbg: "https://lidachk.github.io/cssBayan/cssBayan/assets/lbg370.png";
+	--lbg-50: "https://lidachk.github.io/cssBayan/cssBayan/assets/lbg50.png";
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	padding: 0;
+	list-style:inside
+}
+
+body,
+h1,
+h4,
+p,
+ul,
+ol,
+li {
+	margin: 0;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering:optimizeSpeed;
+	line-height: 1.7;
+
+	color: var(--text-color);
+
+
+	background-color: #140f22;
+	background-image:
+		url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+		linear-gradient(90deg, #261947, #63339c, #140f22);
+	background-repeat: no-repeat, repeat, repeat;
+	background-position: 0% 100%, 0 0, center;
+	background-blend-mode: lighten;
+	background-attachment: fixed;
+	background-size: 100vmin, auto, auto;
+	animation: start1 2s ease-in-out;
+}
+
+.details-container {
+  display: flex;
+  align-items: center; /* Vertically center contents 
+  margin-bottom: 20px; Add spacing between containers 
+
+
+
+.details-container img {
+  border-radius: 50%
+	max-width: 100px;
+  height: auto; 
+  margin-right: 20px; 
+}
+
+#details1,
+#details2 {
+ color: #c7ddd7;
+}
+
+#details_image1,
+#details_image2 {
+  border-radius: 70%; 
+  max-width: 29%; 
+  height: auto;
+}
+
+@keyframes start {
+	0% {
+		background-blend-mode: color-burn;
+	}
+	50% {
+		background-blend-mode: darken;
+	}
+	100% {
+		background-blend-mode: lighten;
+	}
+}
+@keyframes start1 {
+	0% {
+		background-position: -100% 0, 0 0, center;
+	}
+	100% {
+		background-position: 0 100%, 0 0, center;
+	}
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+main {
+	margin: 1em auto;
+	width: var(--mem-width);
+	max-width: 100%;
+	font-size: 0.7rem;
+}
+
+.head {
+	display: block;
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin: 1em 0;
+	text-transform: uppercase;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+ul.item-list {
+	max-width: var(--mem-width);
+	margin: 0 auto;
+}
+
+img {
+	max-width: 50%;
+}
+
+img[width][height] {
+	height: auto;
+}
+
+
+img[src$=".svg"] {
+	width: 50%;
+	height: auto;
+	max-width: none;
+}
+
+input {
+	display: none;
+}
+
+label {
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto auto;
+	grid-template-areas: "h4 control" "img img";
+	margin-bottom: 1em;
+	border-radius: 0.5em;
+	background-color: #45186b;
+	transition: all 0.35s ease-in-out;
+	padding: 0.5em;
+}
+
+label > h4 {
+	height: var(--text-l-height);
+	overflow: hidden;
+
+	transition: height var(--text-duration) ease-in-out;
+	grid-area: h4;
+}
+
+label > .control {
+	grid-area: control;
+}
+
+label > .slider {
+	grid-area: img;
+}
+
+.slider {
+	margin-top: 1em;
+	overflow: hidden;
+	transition: all var(--slide-duration);
+	height: 0;
+}
+
+input:checked + label > .slider {
+
+	transition: height var(--slide-duration) ease-in-out;
+	height: var(--mem-height);
+}
+
+input:checked + label > h4 {
+	height: calc(var(--text-l-height) * 3);
+	
+	transition: height var(--text-duration) ease-in-out;
+}
+
+input:not(:checked) + label > .slider {
+
+	transition: height var(--slide-duration) ease-in-out;
+	height: 0;
+}
+
+.control {
+	display: block;
+	width: var(--text-l-height);
+	height: var(--text-l-height);
+	background: url(https://lidachk.github.io/cssBayan/cssBayan/assets/control.svg);
+	filter: invert(1%) sepia(42%) saturate(1672%) hue-rotate(167deg)
+		brightness(101%) contrast(87%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+
+	opacity: 0;
+}
+
+input:checked ~ label > .control {
+	transform: rotate(-1.5turn);
+	-webkit-transform: rotate(-1.5turn);
+	-moz-transform: rotate(-1.5turn);
+	-ms-transform: rotate(-1.5turn);
+	-o-transform: rotate(-1.5turn);
+}
+
+@keyframes details-show {
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: var(--mem-height);
+	}
+}
+
+@keyframes details-hide {
+	0% {
+		height: var(--mem-height);
+	}
+
+	100% {
+		height: 0;
+	}
+}
+
+@keyframes text-show {
+	0% {
+		height: var(--text-l-height);
+	}
+
+	100% {
+		height: calc(var(--text-l-height) * 5);
+	}
+}
+
+@keyframes text-hide {
+	0% {
+		height: calc(var(--text-l-height) * 5);
+	}
+
+	100% {
+		height: var(--text-l-height);
+	}
+}
+
+@keyframes glow {
+	0% {
+		filter: drop-shadow(0 -0.2em 0.5em #c7ddd7);
+	}
+
+	100% {
+		filter: drop-shadow(0 -0.2em 0.8em #c7ddd7);
+	}
+}
+
+.label:active > .control,
+.label:active {
+	opacity: 1;
+	animation: 0.9s glow ease-in-out infinite alternate;
+}
+
+@media (hover: hover) {
+	li,
+	label {
+		cursor: pointer;
+	}
+
+	input:not(:checked) + label:hover > .slider {
+	
+		transition: height var(--slide-duration) ease-in-out;
+		height: var(--mem-height);
+	}
+
+	input:not(:checked) + label:not(:hover) > .slider {
+		
+		transition: height var(--slide-duration) ease-in-out;
+		height: 0;
+	}
+
+	input:not(:checked) + label:hover > h4 {
+	
+		transition: height var(--text-duration) ease-in-out;
+		height: calc(var(--text-l-height) * 5);
+	}
+
+	input:not(:checked) + label:not(:hover) > h4 {*/
+		/* animation: text-hide var(--text-duration) ease-in-out; */
+		/*transition: height var(--text-duration) ease-in-out;
+		height: var(--text-l-height);
+	}
+
+	ul:hover .control {
+		opacity: 1;
+	}
+
+	input:not(:checked) + label:hover > .control {
+		transform: rotate(1.25turn);
+		-webkit-transform: rotate(1.25turn);
+		-moz-transform: rotate(1.25turn);
+		-ms-transform: rotate(1.25turn);
+		-o-transform: rotate(1.25turn);
+		filter: drop-shadow(0 -0.2em 0.5em #5ed8d8);
+	}
+}
+
+@media all and (min-width: 375px) and (max-width: 1022px) {
+	*//*mobile*/
+/*	body {
+		background-image:
+			url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+			linear-gradient(90deg, #261947, #63339c, #140f22);
+	}
+
+	.label {
+		padding: 1em;
+	}
+
+	main {
+		font-size: 1rem;
+	}
+}
+
+@media all and (min-width: 1023px) {
+	*//*descktop*/
+	/*
+	:root {
+		--mem-width: 38rem;
+		--mem-height: 36rem;
+	}
+
+	body {
+		background-image:
+			url("https://lidachk.github.io/cssBayan/cssBayan/assets/filter.svg"),
+			linear-gradient(90deg, #261947, #63339c, #140f22);
+	}
+
+	.head {
+		margin: 1em 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.label {
+		padding: 1rem;
+	}
+
+	body {
+		background-size: min(calc(50wv-20rem), 100vmin), auto, auto;
+	}
+
+	main {
+		font-size: 1.5rem;
+	}
+	*/
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+.accordion {
+    max-width: 1200px;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+	.a4
+  {
+		background-image: url("../IMG/photo_Kate.jpg");
+		pposition: absolute;
+		background-position: left;
+}
+	.a5 {
+		background-image: url("../IMG/photo_Alex.jpg");
+		position: absolute;
+		background-position: up;
+	}
+.box {
+    position: relative;
+    height: 75%;
+    flex: 1;
+    background-size: cover;
+    transition: .9s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 3;
+    height: 500px;
+}
+p {
+    font-weight: normal;
+    font-family: 'Exo 2', sans-serif;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+.box:hover .text{
+    opacity:1;
+}
+h1 {
+    width: 250px;
+    text-align: center;
+    margin: 50px auto 20px auto;
+}
+@media screen and (max-width: 300px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 70px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 3;
+    }
 }
